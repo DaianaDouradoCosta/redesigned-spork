@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: dourado-crypto-ai
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: TON_WALLET_ADDRESS
+        value: UQDbKXApnlM2kbvWEYrVecDq3LY8hXfrALM4Zdc5QReILmH7
